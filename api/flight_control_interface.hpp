@@ -876,6 +876,9 @@ public:
    */
   static std::string get_return_as_string(Return ret_code);
 
+  
+  static void exit_action(const Return& ret_code);
+
 private:
 
   // Disallow copy and assign
@@ -900,7 +903,6 @@ private:
   static void print_message(const std::string& prefix, const std::string& origin,
       const std::string& message);
   static void enter_action(Action action);
-  static void exit_action(const Return& ret_code);
 
   /**
    * Private non-static member functions

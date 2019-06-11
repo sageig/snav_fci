@@ -369,8 +369,8 @@ FlightControlInterface::Return FlightControlInterface::stop_props()
     while (!finished && FlightControlInterface::ok())
     {
       static int stop_try_cntr = 0;
-      if (scdts_.get().general_status.props_state == SN_PROPS_STATE_SPINNING
-          && scdts_.get().general_status.on_ground == 1)
+      if (scdts_.get().general_status.props_state == SN_PROPS_STATE_SPINNING)
+          // && scdts_.get().general_status.on_ground == 1)
       {
         // Qualcomm Navigator has determined that vehicle is on ground,
         // so it is safe to kill the propellers
